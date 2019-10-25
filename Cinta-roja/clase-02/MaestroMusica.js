@@ -7,7 +7,7 @@ class MaestroMusica extends Maestro {
     }
 }
 
-
+// EJEMPLO
 let Carlos = new MaestroMusica("Musica", [2.5, 3, 1, 2], "Carlos", 5)
 
 console.log(Carlos.calcularPromedio())
