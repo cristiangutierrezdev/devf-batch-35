@@ -1,0 +1,63 @@
+// console.log("1")
+// console.log("2")
+
+// setTimeout(function () {
+
+//     console.log("Datos")
+// }, 5000)
+
+// setTimeout(function () {
+
+//     console.log("Datos2")
+// }, 1000)
+
+// console.log("3")
+
+
+
+
+function peticion() {
+    const users = [
+        {
+            name: "Cristian",
+            id: 1
+        },
+        {
+            name: "Carlos",
+            id: 2
+        },
+        {
+            name: "Gabo",
+            id: 3
+        }
+    ]
+    return users
+}
+
+
+function getUsers (funcion){
+    
+    let datos = funcion() 
+    return datos 
+}
+
+// console.log(getUsers(peticion))
+
+
+function showName(name){
+    return name
+}
+
+function showLastName(lastName){
+    return lastName
+}
+
+
+function getFullName ( isName, isLastName){
+    let name = showName(isName)
+    let lastName = showLastName(isLastName)
+
+    return console.log(`${name} ${lastName}`) 
+}
+
+getFullName("Cristian", "Gutierrez")
