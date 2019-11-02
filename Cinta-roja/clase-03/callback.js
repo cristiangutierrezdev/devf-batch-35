@@ -65,24 +65,48 @@
 
 
 
-function suma(a, b) {
-    let suma = a + b
 
-    return console.log(suma)
-}
 
-// suma(2,5)
+// function suma(a, b) {
+//     let suma = a + b
+//     return console.log(suma)
+// }
 
-function activadora(funcion, a,b) {
-   return funcion(a,b)
-}
+// // suma(2,5)
 
-activadora(suma, 2, 4)
+// function activadora(funcion, a,b) {
+//    return funcion(a,b)
+// }
+
+// activadora(suma, 2, 4)
+
+
+
+// function maquina(moneda) {
+//     if (moneda === 500) {
+//         return console.log("Chocorramo")
+//     } else {
+//         return console.log("Se necesitan 500");
+//     }
+// }
+
+// maquina("500")
+
+
+
+
+
+
+
+
+
+
+
 
 
 // function maquina(moneda, producto) {
 //     if (moneda === 500 && producto === "Chocorramo") {
-//         return console.log( "Chocorramo")
+//         return console.log("Chocorramo")
 //     } else if (moneda === 1000 && producto === "Pollo") {
 //         return console.log("Pollo")
 //     } else {
@@ -92,3 +116,15 @@ activadora(suma, 2, 4)
 
 
 // maquina(1000, "Pollo")
+
+
+function suma(a, b) {
+    let suma = a + b
+    return console.log(suma)
+}
+
+function myFunction(unaFuncion, otroDato) {
+    unaFuncion(a, b)
+}
+
+myFunction(suma, 5, 8)
