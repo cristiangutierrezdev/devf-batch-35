@@ -9,8 +9,10 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
 app.post("/api/v1/create/user", (request, response) => {
+
     const data = request.body
     const newUser = new User(data)
+
     newUser.save((err, user) => {
         if (err) {
             response.status(409).send(err)
@@ -31,7 +33,17 @@ app.get("/api/v1/get/user/:userid", (request, response) => {
     })
 })
 
-app.get("/api/v1/get/users", (request, response) => {
+app.get("/api/v1/get/inactive/users", (request, response) => {
+    User.find({ is_active: false }, (err, users) => {
+        if (err) {
+            response.status(404).send(err)
+        } else {
+            response.status(200).send(users)
+        }
+    })
+})
+
+app.get("/api/v1/get/active/users", (request, response) => {
     User.find({ is_active: true }, (err, users) => {
         if (err) {
             response.status(404).send(err)
